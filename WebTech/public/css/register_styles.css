@@ -1,0 +1,17 @@
+.jumbo{
+    margin-top: 100px !important;
+    margin-bottom: 100px !important;
+}
+.form-group{
+    margin-top: 15px;
+}
+.jumbotron a{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.card-header{
+    background-color: #96262e;
+    color: white;
+    text-align: center;
+}

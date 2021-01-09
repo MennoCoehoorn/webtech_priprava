@@ -1,0 +1,134 @@
+.carousel_button{
+	background-image: none;
+}
+
+.carousel_button span{
+	color:black;
+}
+
+.carousel{
+	overflow:hidden;
+	height:auto;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.car-img {
+  object-fit: contain !important;
+ 	display: block;
+ 	margin:auto;
+  
+}
+
+h2{
+	padding: 15px;
+}
+
+a{
+	margin-left: 15px;
+	color: #96262e;
+}
+
+@media (max-width:600px) {
+  h2.responsive {
+    font-size: 20px;
+  }
+}
+
+.color-pink{
+	background-color: pink;
+}
+
+.color-red{
+	background-color: red;
+}
+
+.color-green{
+	background-color: green;
+}
+.product_name{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+/* .dropdown-menu{
+
+	height: 150px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+} */
+.dropdown-menu label{
+	display: block;
+	margin-left: 15px;
+	margin-right: 10px;
+}
+.dropdown-menu input{
+	margin-right: 10px;
+}
+
+.size_button, .cart_add{
+	width: 200px;
+}
+
+.color_picker{
+	padding-left: 0;
+	margin-top:20px;
+	list-style-type: none;
+}
+.color_picker li{
+	
+	margin: 5px;
+	display: inline;
+}
+
+.hidden-radio{
+  opacity: 0;
+  position: fixed;
+  width: 0;
+}
+
+.color{
+	display: block;
+	width: 35px;
+	height: 35px;
+	border:solid 1px;
+} 
+
+.color_picker input[type="radio"]:checked + label{
+	outline: solid 4px;
+}
+
+.quantity_button{
+	
+	border:none;
+	background-color: transparent;
+
+}
+
+.quantity_input ::-webkit-outer-spin-button,
+.quantity_input ::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity_input{
+	-moz-appearance: textfield;
+	margin: 10px;
+	width: 50px;
+}
+
+.description-tabs{
+	margin-top: 60px;
+}
+
+.tab-pane{
+	padding: 15px;
+}
+
+
+.product-sel{
+	padding-left: 60px;
+}
+
+#sizeDropdown{
+	margin-top: 10px;
+}

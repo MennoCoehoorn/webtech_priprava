@@ -1,0 +1,92 @@
+h1,a {
+    text-align: center;
+}
+    
+.circles{
+    align-self: center;
+}
+
+form h4{
+    text-align: left;
+}
+
+.cart_items_scroll{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.cart_items_scroll h4{
+    text-align: left;
+}
+
+.cart_items_scroll input{
+    background-color: #96262e;
+    color: white;
+}
+
+.cart_item{
+    margin: 10px;
+    border: #96262e 2px solid;
+}
+
+.product_pic img{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product_part{
+    display: inline-block;
+}
+
+li h6,p{
+    display: inline-block;
+}
+ul{
+    list-style: none;
+}
+li h4{
+    margin-top: 10px;
+}
+li h6{
+    margin-right: 5px;
+}
+.top_row{
+    margin-top: 15%;
+}
+.remove_btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.bottom_buttons{
+    margin-bottom: 25px;
+}
+.order_info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cart_header{
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.cart_header div{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.jumbotron form{
+    margin-top: 25px;
+}
+form h4,h3{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-group{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form-group label{
+    margin-top: 10px;
+}
+.payment{
+    margin-bottom: 15px;
+}

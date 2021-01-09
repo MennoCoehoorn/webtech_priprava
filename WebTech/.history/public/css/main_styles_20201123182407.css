@@ -1,0 +1,191 @@
+h2,h4,a {
+    text-align: center;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.btn-info{
+    background-color: #96262e !important;
+}
+
+.btn-secondary{
+	background-color: gray !important;
+}
+
+.btn-secondary:hover{
+    background-color: white !important;
+    color: #96262e;
+}
+
+.btn-info:hover{
+    background-color: white !important;
+    color: #96262e;
+}
+
+.btn-info:disabled{
+    background-color: white !important;
+    color: #413738;
+}
+
+.form-control:focus {
+    border-color: #96262e;
+    box-shadow: 0 0 0 0.2rem rgba(110, 29, 34, 0.25);
+}
+
+.body{
+	padding: 65px;
+}
+
+.header-icon{
+	color:white;
+	margin-right: 5px;
+	
+}
+.header-icon span{
+	font-size: 25px;
+
+}
+
+.navbar-right{
+	margin-top:5px;
+	padding-right: 20px;
+	width: 70%;
+}
+
+.navbar-toggler{
+	color:white;
+}
+
+
+
+#myNavbar a{
+	color: white;
+
+
+}
+
+#myNavbar .navbar-nav{
+	font-weight: bold;
+}
+
+#myNavbar .dropdown-menu{
+	font-weight: normal;
+}
+
+#myNavbar ul{
+	background-color: #96262e;
+
+}
+
+.navbar{
+	background-color: #96262e;
+}
+
+#searchInput{
+	max-height: 25px;
+	background: transparent;
+	border-right: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+    border-top: none;
+	color: white;
+	display: none;
+	max-width: 200px;
+	width: 100%;
+
+}
+
+#searchIcon, #searchIcon:focus{
+	background: transparent;
+	border: 0;
+	outline:0;
+}
+
+#searchBtn, #searchBtn2{
+	display: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: white;
+	opacity: 1; /* Firefox */
+  }
+
+
+.dropdown ul{
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+}
+
+
+ 
+footer{
+	background-color: #96262e;
+	padding: 30px;
+	margin-top: 30px;
+}
+
+.footer_link{
+	list-style-type: none;
+}
+.footer_link a{
+	color:white;
+}
+.socials span{
+	color:white;
+	font-size: 30px;
+	margin: 10px;
+}
+
+.socials{
+	position: static;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 10px
+}
+
+.social_ic{
+	margin: 10px;
+}
+
+.footer_links{
+	position: static;
+	display: block;
+	width: 100%;
+	padding: 10px
+}
+
+
+#searchPop{
+	display: none;
+}
+
+#searchInput, #searchInput2{
+	max-height: 25px;
+	background: transparent;
+	border-right: none;
+    border-left: none;
+    border-bottom: 2px solid white;
+    border-top: none;
+	color: white;
+	display: none;
+	max-width: 200px;
+	width: 100%;
+
+}
+
+#main{
+	margin-top: 60px;
+}
+.footer-copyright a{
+	color: white;
+}
+
+ #karticka{
+	max-width: 300px;
+	margin-bottom: 10px;
+}
