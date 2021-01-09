@@ -13,6 +13,9 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\SizeController;
 use App\Http\Controllers\ColorController;
 use App\Http\Controllers\StockController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\TestTextController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -48,6 +51,11 @@ Route::get('/productdetail', function (){
 /*Route::get('/cart1', function (){
     return view('cart_1');
 });*/
+
+Route::get('/users',[UserController::class, 'index'])->middleware('auth');
+Route::post('/modify',[TestTextController::class, 'update']);
+Route::post('/comment',[CommentController::class, 'create'])->middleware('auth');
+Route::post('/like',[CommentController::class, 'like'])->middleware('auth');
 
 Route::get('/cart1',[Cart1Controller::class, 'index']);
 Route::delete('/cart1/{id}',[Cart1Controller::class, 'destroy_sub']);

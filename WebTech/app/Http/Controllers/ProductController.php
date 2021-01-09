@@ -7,9 +7,20 @@ use App\Models\Product;
 use App\Models\ProductSizeColor;
 use App\Models\Color;
 use App\Models\Picture;
+use App\Models\Comment;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use  Illuminate\Database\Eloquent\Builder;
 use Intervention\Image\Facades\Image;
+
+class comment_info{
+    public $username;
+    public $title;
+    public $content;
+    public $likes;
+    public $date;
+    public $id;
+}
 
 class ProductController extends Controller
 {
@@ -510,6 +521,21 @@ class ProductController extends Controller
 
     public function show($gender,$category,$id){
         $product=Product::where([['id',$id]])->first();
+        $comments=Comment::where([['product_id',$id]])->get();
+        //$comments= DB::table('comments')->join('users','comments.user_id','=','users.id')->where([['product_id',$id]])->get();
+        $comment_infos=[];
+        foreach($comments as $comment){
+            $comment_info = new comment_info();
+            $user = User::where([['id',$comment->user_id]])->first();
+            $comment_info->username=$user->name;
+            $comment_info->title=$comment->title;
+            $comment_info->content=$comment->content;
+            $comment_info->likes=$comment->likes;
+            $comment_info->date=$comment->created_at;
+            $comment_info->id=$comment->id;
+            array_push($comment_infos,$comment_info);
+        }
+
         $pictures=Picture::where([['product_id',$id]])->orderBy('carousel_num','asc')->get();
         $colors=ProductSizeColor::select('color_code','color_name')
                                 ->join('colors','products_sizes_colors.color_id','=','colors.id')
@@ -529,6 +555,6 @@ class ProductController extends Controller
         }
        
         
-        return view('product_detail',['product'=>$product, 'pictures'=>$pictures, 'colors'=>$colors, 'sizes'=>$sizes, 'stock'=>$stock]);
+        return view('product_detail',['product'=>$product, 'pictures'=>$pictures, 'colors'=>$colors, 'sizes'=>$sizes, 'stock'=>$stock, 'comments'=>$comment_infos]);
     }
 }

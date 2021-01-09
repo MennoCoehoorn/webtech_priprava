@@ -1,0 +1,36 @@
+.container{
+    margin-top: 100px;
+}
+.test_text_things{
+    margin-top: 50px;
+}
+.col{
+    text-align: center;
+}
+.title_users{
+    background-color: #96262e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+.admin_things:hover::after{
+    content: " -toto môžeš len lebo si admin";
+}
+.modify_input{
+    border: solid 2px  #96262e;
+}
+.modify_input:focus{
+    background-color: chartreuse !important;
+}
+.highlight_word{
+    color: #96262e;
+    display: inline;
+}
+.name_word::first-letter{
+    background-color:black !important;
+    font-size: 1.5em;
+}
+.hello::first-letter{
+    background-color:#96262e !important;
+    font-size: 1.5em;
+}

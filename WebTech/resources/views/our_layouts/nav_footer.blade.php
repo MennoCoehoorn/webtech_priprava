@@ -8,13 +8,12 @@
 
  			<button class="navbar-toggler header-icon" type="button" data-toggle="collapse" data-target="#myNavbar" 
  			aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
- 			<span class="fa fa-bars" aria-hidden="true"></span>
+ 				<span class="fa fa-bars" aria-hidden="true"></span>
+ 			</button>
 
- 		</button>
-
-
-
-
+			 <a class="header-icon" href="/users">
+	 					<span class="fa fa-user" aria-hidden="true"></span>
+	 		</a>
  		</section>
 
 	 	<section class="navbar-nav navbar-right">

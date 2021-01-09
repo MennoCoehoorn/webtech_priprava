@@ -17,4 +17,10 @@ class Product extends Model
     {
         return $this->hasMany('App\Models\Picture');
     }
+
+    
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
 }

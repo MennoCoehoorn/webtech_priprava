@@ -11,6 +11,7 @@
 	rel="stylesheet"  type='text/css'>
 	<link rel="stylesheet" href="/css/main_styles.css">
 	<link rel="stylesheet" href="/css/detail_styles.css">
+	<link rel="stylesheet" href="/css/comment_styles.css">
 	
 	<script type="text/javascript" src="/js/all-scripts.js"></script>
 
@@ -252,6 +253,56 @@
 				</div>
 				
 			</section>
+		</section>
+		<section class="comments">
+			<h3>Komentáre</h3>
+			<hr>
+			@foreach($comments as $comment)
+			<section class="comment">
+				<div class="title">
+					<h4>{{$comment->title}}</h4>
+				</div>
+				<div class="info">
+					<h6>Komentár pridal <span>{{$comment->username}}</span> ({{$comment->date}})</h6>
+				</div>
+				<div class="content">
+					<p>{{$comment->content}}</p>
+				</div>
+				<div class="comment_footer">
+					<h6>Počet likov: <span class="likes">{{$comment->likes}}</span></h6>
+					<form action="/like" method="POST">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						<input type="hidden" name="cIdHidden" value={{$comment->id}}>
+						<button type="submit" class="btn btn-info">Like</button>
+					</form>
+				</div>
+			</section>
+			@endforeach
+			<hr>
+			<section class="comments_add">
+				<div class="comment_add_title">
+					<h5>Pridať komentár</h5>
+				</div>
+				<div class="comment_add_form">
+					<form action="/comment" method="POST">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+						<div class="title_box">
+							<label for="c_title">Nadpis komentára</label>
+							<input type="text" name="title" id="c_title">
+						</div>
+						<input type="hidden" name="idHidden" value={{$product->id}}>
+						<input type="hidden" name="sexHidden" value={{strtolower($product->sex)}}>
+						<input type="hidden" name="catHidden" value={{$product->category}}>
+						<div class="comment_input">
+							<textarea name="content" id="" cols="30" rows="10">Sem môžete napísať svoj komentár...</textarea>
+						</div>
+						<div class="comment_button">
+							<button type="submit" class="btn btn-info">Pridať komentár</button>
+						</div>
+					</form>
+				</div>
+			</section>
+
 		</section>
 	</article>
 

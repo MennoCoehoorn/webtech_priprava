@@ -41,6 +41,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function roles()
+    {
+        return $this->belongsToMany('App\Models\Role')->withTimestamps();
+    }
+
+
     public function deliveryinfo()
     {
         return $this->hasOne('App\Models\DeliveryInfo');
@@ -50,4 +56,17 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Models\Order');
     }
+
+    public function comments()
+    {
+        return $this->hasMany('App\Models\Comment');
+    }
+
+    public function hasRole($role){
+        if ($this->roles()->where('name', $role)->first()) {
+            return true;
+        }
+        return false;
+    }
+
 }
