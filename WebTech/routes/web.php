@@ -16,6 +16,7 @@ use App\Http\Controllers\StockController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TestTextController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\BootstrapController;
 
 
 /*
@@ -56,6 +57,7 @@ Route::get('/users',[UserController::class, 'index'])->middleware('auth');
 Route::post('/modify',[TestTextController::class, 'update']);
 Route::post('/comment',[CommentController::class, 'create'])->middleware('auth');
 Route::post('/like',[CommentController::class, 'like'])->middleware('auth');
+Route::get('/bootstrap',[BootstrapController::class, 'index']);
 
 Route::get('/cart1',[Cart1Controller::class, 'index']);
 Route::delete('/cart1/{id}',[Cart1Controller::class, 'destroy_sub']);

@@ -521,9 +521,9 @@ class ProductController extends Controller
 
     public function show($gender,$category,$id){
         $product=Product::where([['id',$id]])->first();
-        $comments=Comment::where([['product_id',$id]])->get();
+        //$comments=Comment::where([['product_id',$id]])->get();
         //$comments= DB::table('comments')->join('users','comments.user_id','=','users.id')->where([['product_id',$id]])->get();
-        $comment_infos=[];
+        /*$comment_infos=[];
         foreach($comments as $comment){
             $comment_info = new comment_info();
             $user = User::where([['id',$comment->user_id]])->first();
@@ -534,7 +534,8 @@ class ProductController extends Controller
             $comment_info->date=$comment->created_at;
             $comment_info->id=$comment->id;
             array_push($comment_infos,$comment_info);
-        }
+        }*/
+        $comments = Comment::with('user')->where([['product_id',$id]])->get();
 
         $pictures=Picture::where([['product_id',$id]])->orderBy('carousel_num','asc')->get();
         $colors=ProductSizeColor::select('color_code','color_name')
@@ -555,6 +556,6 @@ class ProductController extends Controller
         }
        
         
-        return view('product_detail',['product'=>$product, 'pictures'=>$pictures, 'colors'=>$colors, 'sizes'=>$sizes, 'stock'=>$stock, 'comments'=>$comment_infos]);
+        return view('product_detail',['product'=>$product, 'pictures'=>$pictures, 'colors'=>$colors, 'sizes'=>$sizes, 'stock'=>$stock, 'comments'=>$comments]);
     }
 }

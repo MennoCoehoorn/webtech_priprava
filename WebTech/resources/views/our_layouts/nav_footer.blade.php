@@ -14,6 +14,8 @@
 			 <a class="header-icon" href="/users">
 	 					<span class="fa fa-user" aria-hidden="true"></span>
 	 		</a>
+
+			 <a href="/bootstrap" style="color:white;">Bootstrap</a>
  		</section>
 
 	 	<section class="navbar-nav navbar-right">

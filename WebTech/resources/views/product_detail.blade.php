@@ -263,18 +263,20 @@
 					<h4>{{$comment->title}}</h4>
 				</div>
 				<div class="info">
-					<h6>Komentár pridal <span>{{$comment->username}}</span> ({{$comment->date}})</h6>
+					<h6>Komentár pridal <span>{{$comment->user->name}}</span> ({{$comment->created_at}})</h6>
 				</div>
 				<div class="content">
 					<p>{{$comment->content}}</p>
 				</div>
 				<div class="comment_footer">
 					<h6>Počet likov: <span class="likes">{{$comment->likes}}</span></h6>
+					@can('like',$comment)
 					<form action="/like" method="POST">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 						<input type="hidden" name="cIdHidden" value={{$comment->id}}>
 						<button type="submit" class="btn btn-info">Like</button>
 					</form>
+					@endcan
 				</div>
 			</section>
 			@endforeach

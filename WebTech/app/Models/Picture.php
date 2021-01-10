@@ -13,4 +13,8 @@ class Picture extends Model
     {
         return $this->belongsTo('App\Models\Product');
     }
+
+    public function article(){
+        return $this->hasOne(Article::class);
+    }
 }
